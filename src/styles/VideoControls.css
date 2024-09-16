@@ -1,0 +1,222 @@
+#video-controls {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+}
+
+#video-timeline {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+}
+
+#video-timeline #progress-area {
+  width: 100%;
+  height: 8px;
+  background-color: gray;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  pointer-events: none;
+}
+
+#video-timeline #progress-area #loading-progress {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background-color: orange;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+#video-timeline #progress-area #loading-progress .text-time-current {
+  position: absolute;
+  bottom: 13px;
+  color: black;
+  background-color: orange;
+  width: 60px;
+  padding: 2px 0;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  display: none;
+  z-index: 2;
+}
+
+#video-timeline #progress-area #loading-progress .text-time-over {
+  position: absolute;
+  bottom: 13px;
+  color: white;
+  background-color: transparent;
+  width: 60px;
+  padding: 2px 0;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  display: none;
+  z-index: 1;
+}
+
+#video-timeline #progress-area #loading-progress-load {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8px;
+  background-color: rgb(37, 37, 36);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* #video-timeline #progress-area #loading-progress::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border: 1px solid orange;
+  pointer-events: none;
+} */
+
+
+#controls-content {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+
+#controls-content #btn-speed {
+  position: relative;
+}
+
+#controls-content #volume,
+#controls-content #action,
+#controls-content #other {
+  display: inline-flex;
+  align-items: center;
+  gap:0.5rem;
+}
+
+#controls-content #volume,
+#controls-content #other {
+  width: 200px;
+}
+
+#controls-content #volume #duration {
+  color: white;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+#controls-content #content-volume {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+#controls-content #other {
+  display: flex;
+  justify-content: end;
+}
+
+#controls-content #action {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+#controls-content #volume input[type="range"] {
+  width: 80px;
+  height: 5px;
+  accent-color: orange;
+}
+
+
+#controls-content #btn-speed .menu-speed {
+  position: absolute;
+  width: 150px;
+  bottom: 30px;
+  right: 0;
+  border-radius: 5px;
+  padding:0.5rem 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+}
+
+#controls-content #btn-speed .menu-speed li {
+  padding: 0.8rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  color: black;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+
+#controls-content #btn-speed .menu-speed li:hover {
+  background-color: rgba(255, 165, 0, 0.5);
+
+}
+
+#controls-content #btn-speed .menu-speed .active {
+  background-color: rgba(255, 165, 0, 0.5);
+
+}
+
+
+/* #controls-content #btn-speed .menu-speed li:last-child {
+  border-bottom: none;
+} */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#back-1,
+#back-2,
+#back-3 {
+  animation: fadeIn 0.2s ease-in-out;
+  will-change: opacity;
+}
+
+#back-2 {
+  animation-delay: 0.2s;
+}
+
+#back-1 {
+  animation-delay: 0.4s;
+}
+
+#forward-1,
+#forward-2,
+#forward-3 {
+  animation: fadeIn 0.2s ease-in-out;
+  will-change: opacity;
+}
+
+#forward-2 {
+  animation-delay: 0.2s;
+}
+
+#forward-3 {
+  animation-delay: 0.4s;
+}
